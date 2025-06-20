@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram - Inicio de sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 30px 40px;
+      width: 350px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #262626;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px 8px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      background: #3897f0;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #2a7bd1;
+    }
+    .footer-msg {
+      margin-top: 15px;
+      font-size: 12px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Instagram</h1>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Número de teléfono, usuario o correo electrónico" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button type="submit">Iniciar sesión</button>
+    </form>
+    <p class="footer-msg" id="message"></p>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const message = document.getElementById('message');
+      message.style.color = 'green';
+      message.textContent = "Esta es una simulación para fines educativos. ¡No ingreses tus datos reales!";
+    });
+  </script>
+</body>
+</html>
